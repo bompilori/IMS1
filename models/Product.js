@@ -17,7 +17,7 @@ Product.init(
       unique: true,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       unique: false,
     },
@@ -42,6 +42,13 @@ Product.init(
       type: DataTypes.INTEGER,
       references: {
         model: "category",
+        key: "id",
+      },
+    },
+    supplier_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "supplier",
         key: "id",
       },
     },
